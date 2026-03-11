@@ -15,11 +15,7 @@ export default function App() {
         {/* 2. Define your screens inside the Navigator */}
        
         
-        <Stack.Screen 
-          name="Dash" 
-          component={Dash} 
-          options={{ title: 'Item Details' }}
-        />
+        <Stack.Screen  name="Dash"  component={Dash} />
       </Stack.Navigator>
     </NavigationContainer>
   );

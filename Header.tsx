@@ -6,8 +6,8 @@ export default function Header() {
   return (
      <View className='w-full flex flex-row justify-between items-center mx-10'>
          {/* logo  */}
-                <View className='  flex flex-row gap-2ù items-center justify-center '>
-                    <View className='bg-zinc-950 w-14 h-14 rounded-full justify-center items-center  '>
+                <View className='  flex flex-row gap-2 items-center justify-center '>
+                    <View className='bg-zinc-950  w-14 h-14 rounded-full justify-center items-center  '>
                       <Text className='text-white text-2xl font-semibold'>Z</Text>
                     </View>
                      <View className='text-zinc-950 flex flex-col text-xl font-bold ml-2'>
@@ -16,7 +16,7 @@ export default function Header() {
                     </View>  
                 </View>
              {/* notif btn */}
-            <View className='flex flex-row gap-5 items-center justify-center  '>
+            <View className='flex flex-row gap-6 items-center justify-center  '>
                 <Pressable>
                     <Ionicons name="notifications-outline" size={30} color="black" />
                 </Pressable>

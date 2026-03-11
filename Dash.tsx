@@ -7,8 +7,33 @@ import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import Feather from '@expo/vector-icons/Feather';
 import Header from 'Header';
 import Navbar from 'Navbar';
+
+import {
+  
+  TouchableOpacity,
+  Animated,
+  useWindowDimensions,
+ 
+  Modal,
+} from "react-native";
+import  { useEffect, useRef, useState } from "react";
+
+
+
 export default function Dash() {
 
+{/* animated counder */}
+function AnimatedCounter({ value, fontSize = 28, color = "#1d4ed8" }: { value: number; fontSize?: number; color?: string }) {
+  const anim = useRef(new Animated.Value(0)).current;
+  const [display, setDisplay] = useState(0);
+  useEffect(() => {
+    Animated.timing(anim, { toValue: value, duration: 1200, useNativeDriver: false }).start();
+    const l = anim.addListener(({ value: v }) => setDisplay(Math.floor(v)));
+    return () => anim.removeListener(l);
+  }, [value]);
+  return <Text style={{ fontSize, fontWeight: "bold", color }}>{display.toLocaleString()}</Text>;
+}
+{/* anime end */}
 
   return (
     <ImageBackground 
@@ -16,22 +41,23 @@ export default function Dash() {
       resizeMode="cover" 
       className='h-screen w-screen'
     >
-   <Navbar/>
+
     <View className=' bg-[#ede3f8]/50  h-screen w-screen flex items-center justify-start gap-2 pt-12 p-5'>
         {/* logo and notif */}
         <Header></Header>
      
      {/* logo and notif end */}
 
- 
+
     {/* balance view */}
      <View className='w-full flex flex-col justify-start items-start mt-7'>
         <Text className='font-semibold text-black text-lg'>Your Balance</Text>
-        <Text className='text-black text-6xl font-semibold mt-2'>$ 23,544.0</Text>
+        <Text className='text-black text-6xl font-semibold mt-2'>$ <AnimatedCounter value={24180} fontSize={48} color="#000" />
+</Text>
      </View>
    {/* balance view end */}
 
-
+ <Navbar/>
 
  {/* button view */}
    <View className='w-full flex flex-row gap-2 mt-6'>
@@ -141,6 +167,7 @@ export default function Dash() {
         </View>
         <Text className='text-black font-semibold text-xl'>-$299.0</Text>
     </View>
+
      <View className='w-full flex flex-row justify-between items-center mt-6 px-2'>
         <View className='flex flex-row items-center gap-3'>
             <Image source={require('./assets/betcord.png')} resizeMode="contain" className='w-10 h-10 rounded-full  ' />
@@ -150,6 +177,17 @@ export default function Dash() {
             </View>
         </View>
         <Text className='text-black font-semibold text-xl'>-$199.0</Text>
+    </View>
+
+     <View className='w-full flex flex-row justify-between items-center mt-6 px-2'>
+        <View className='flex flex-row items-center gap-3'>
+            <Image source={require('./assets/LARA.png')} resizeMode="contain" className='w-10 h-10 rounded-full  ' />
+            <View>
+                <Text className='text-black font-semibold text-md'>Lara</Text>
+                <Text className='text-black/50 font-normal text-sm'>1:45</Text>
+            </View>
+        </View>
+        <Text className='text-black font-semibold text-xl'>-$1799.0</Text>
     </View>
 </ScrollView>
 
