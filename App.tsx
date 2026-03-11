@@ -1,14 +1,26 @@
-import { ScreenContent } from 'components/ScreenContent';
-import { StatusBar } from 'expo-status-bar';
-
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import './global.css';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import Dash from 'Dash';
 
+const Stack = createNativeStackNavigator();
 export default function App() {
   return (
-    <SafeAreaProvider>
-      <ScreenContent title="Home" path="App.tsx"></ScreenContent>
-      <StatusBar style="auto" />
-    </SafeAreaProvider>
+    <NavigationContainer>
+      <Stack.Navigator 
+        initialRouteName="Dash"
+        screenOptions={{ headerShown: false }}
+      >
+        {/* 2. Define your screens inside the Navigator */}
+       
+        
+        <Stack.Screen 
+          name="Dash" 
+          component={Dash} 
+          options={{ title: 'Item Details' }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
