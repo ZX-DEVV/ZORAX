@@ -3,6 +3,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import './global.css';
 import Dash from 'Dash';
+import Qrcode from 'Qrcode';
+import Notif from 'Notif';
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -16,6 +18,9 @@ export default function App() {
        
         
         <Stack.Screen  name="Dash"  component={Dash} />
+       <Stack.Screen  name="Qr"  component={Qrcode} />
+         <Stack.Screen  name="nn"  component={Notif} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
