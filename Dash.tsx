@@ -52,7 +52,7 @@ function AnimatedCounter({ value, fontSize = 28, color = "#1d4ed8" }: { value: n
     {/* balance view */}
      <View className='w-full flex flex-col justify-start items-start mt-7'>
         <Text className='font-semibold text-black text-lg'>Your Balance</Text>
-        <Text className='text-black text-6xl font-semibold mt-2'>$ <AnimatedCounter value={24180} fontSize={48} color="#000" />
+        <Text className='text-black text-6xl font-semibold mt-2'>$ <AnimatedCounter value={1680} fontSize={48} color="#000" />
 </Text>
      </View>
    {/* balance view end */}
@@ -92,7 +92,7 @@ function AnimatedCounter({ value, fontSize = 28, color = "#1d4ed8" }: { value: n
       imageStyle={{ borderRadius: 10 }}
     >
         <Image source={require('./assets/MISA.png')} resizeMode="contain" className='w-12 h-12  ml-2' />
-         <Text className='text-white text-2xl  mt-1 ml-2'>$ 12,345.0</Text>
+         <Text className='text-white text-2xl  mt-1 ml-2'>$ 1234.0</Text>
          <View className='px-4 flex-row items-center justify-between '>
                     <Text className='text-white text-md font-light mt-4 ml-2'>Credit</Text>
         <Text className='text-white text-md font-light mt-4 ml-2'>1234 ****</Text>
@@ -105,7 +105,7 @@ function AnimatedCounter({ value, fontSize = 28, color = "#1d4ed8" }: { value: n
       imageStyle={{ borderRadius: 10 }}
     >
         <Image source={require('./assets/MISA.png')} resizeMode="contain" className='w-12 h-12  ml-2' />
-         <Text className='text-white text-2xl  mt-1 ml-2'>$ 12,345.0</Text>
+         <Text className='text-white text-2xl  mt-1 ml-2'>$ 345.0</Text>
          <View className='px-4 flex-row items-center justify-between '>
                     <Text className='text-white text-md font-light mt-4 ml-2'>Credit</Text>
         <Text className='text-white text-md font-light mt-4 ml-2'>1234 ****</Text>
@@ -117,7 +117,7 @@ function AnimatedCounter({ value, fontSize = 28, color = "#1d4ed8" }: { value: n
       imageStyle={{ borderRadius: 10 }}
     >
         <Image source={require('./assets/MISA.png')} resizeMode="contain" className='w-12 h-12  ml-2' />
-         <Text className='text-white text-2xl  mt-1 ml-2'>$ 12,345.0</Text>
+         <Text className='text-white text-2xl  mt-1 ml-2'>$ 45.0</Text>
          <View className='px-4 flex-row items-center justify-between '>
                     <Text className='text-white text-md font-light mt-4 ml-2'>Credit</Text>
         <Text className='text-white text-md font-light mt-4 ml-2'>1234 ****</Text>

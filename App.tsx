@@ -4,14 +4,14 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import './global.css';
 import Dash from 'Dash';
 import Qrcode from 'Qrcode';
-import Notif from 'Notif';
+import Minerscreen from 'Minerscreen';
 
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator 
-        initialRouteName="Dash"
+        initialRouteName="Mine"
         screenOptions={{ headerShown: false }}
       >
         {/* 2. Define your screens inside the Navigator */}
@@ -19,8 +19,7 @@ export default function App() {
         
         <Stack.Screen  name="Dash"  component={Dash} />
        <Stack.Screen  name="Qr"  component={Qrcode} />
-         <Stack.Screen  name="nn"  component={Notif} />
-
+<Stack.Screen  name="Mine"  component={Minerscreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
